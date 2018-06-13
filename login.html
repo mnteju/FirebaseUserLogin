@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="login-page" >
+  <p id="text"></p>
+  <div class="form" id="loginDiv">
+    <!-- <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form> -->
+    <form class="login-form">
+      <input type="text" placeholder="username" id="email_field"/>
+      <input type="password" placeholder="password" id="pwd_field"/>
+      <button type="button" onclick="click_login()">login</button>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+  </div>
+</div>
+<div class="login-page" id="afterLoginDiv">
+    <div class="form">
+  <h3>Welcome User</h3>
+  <p id="user_para">Welcome to Firebase web login example. You are currently logged in.</p>
+  <button onclick="click_logout()">Logout</button>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBhbAri5F4Cx4xHkag8heDR86PwxySMK1s",
+    authDomain: "trial-project-a1381.firebaseapp.com",
+    databaseURL: "https://trial-project-a1381.firebaseio.com",
+    projectId: "trial-project-a1381",
+    storageBucket: "trial-project-a1381.appspot.com",
+    messagingSenderId: "266410132134"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="login.js"></script>
+</body>
+</html>
